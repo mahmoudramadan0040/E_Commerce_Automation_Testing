@@ -23,16 +23,16 @@ public class CreateOrderStepDifinition {
     @And("user add this product to cart shpping list")
     public void user_add_product_item_toCart() throws InterruptedException {
         order.addToCart();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
     @And("user close from notification message")
     public void user_closeNotificationMsg() throws InterruptedException{
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         order.closeNotificationMsg();
     }
     @When("user press on shopping cart link")
     public void user_show_shopping_cart() throws InterruptedException{
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         order.showCartShopping();
     }
     @And("user agree the term of order")
@@ -42,27 +42,27 @@ public class CreateOrderStepDifinition {
     @And("user press CheckOut button for order")
     public void user_press_checkout_for_order() throws InterruptedException {
         order.checkoutButton();
-        Thread.sleep(500);
+        Thread.sleep(2000);
     }
     @And("user enter billing address if not exists")
     public void user_enter_billing_address() throws InterruptedException {
         try{
             if(order.isSelectAddressDisplay()){
                 order.oldAdressSelected("mahmoud ramadan, moon streets, cairo 45369, Egypt");
-                Thread.sleep(400);
+                Thread.sleep(2000);
                 order.ClickContinueOne();
-                Thread.sleep(600);
+                Thread.sleep(1000);
             }else{
                 order.inputForm("Egypt","cairo","moon streets","45369","01356489879");
-                Thread.sleep(400);
+                Thread.sleep(2000);
                 order.ClickContinueOne();
-                Thread.sleep(600);
+                Thread.sleep(2000);
             }
         }catch (Exception e){
             order.inputForm("Egypt","cairo","moon streets","45369","01356489879");
-            Thread.sleep(400);
+            Thread.sleep(2000);
             order.ClickContinueOne();
-            Thread.sleep(600);
+            Thread.sleep(2000);
         }
 //        if(order.isSelectAddressDisplay()){
 //            order.oldAdressSelected("mahmoud ramadan, moon streets, cairo 45369, Egypt");
@@ -79,30 +79,30 @@ public class CreateOrderStepDifinition {
     }
     @And("user shipping address")
     public void user_shipping_address() throws InterruptedException {
-        Thread.sleep(600);
+        Thread.sleep(2000);
         order.ClickContinueTwo();
 
     }
     @And("user select shipping method type")
     public void user_select_shipping_type() throws InterruptedException {
-        Thread.sleep(600);
+        Thread.sleep(2000);
         order.ClickContinueThree();
 
     }
     @And("user select payment method type")
     public void user_select_payment_type() throws InterruptedException {
-        Thread.sleep(600);
+        Thread.sleep(2000);
         order.ClickContinueFour();
     }
 
     @And("user confirm the order by pressing confirm btn")
     public void user_confirm_order() throws InterruptedException {
-        Thread.sleep(600);
+        Thread.sleep(2000);
         order.Confirm();
     }
     @Then("user show message \"Your order has been successfully processed!\"")
     public void user_show_msg_success_order() throws InterruptedException {
-        Thread.sleep(1200);
+        Thread.sleep(2500);
         String ActualResult = order.successOrderMsg();
         System.out.println(ActualResult);
         String ExpectedResult ="Your order has been successfully processed!";
@@ -110,7 +110,7 @@ public class CreateOrderStepDifinition {
     }
     @When("user navigate the link order details")
     public void user_Navigate_order_details_url() throws InterruptedException {
-        Thread.sleep(600);
+        Thread.sleep(2500);
         order.OrderDetails();
     }
     @Then("user show order number of order")

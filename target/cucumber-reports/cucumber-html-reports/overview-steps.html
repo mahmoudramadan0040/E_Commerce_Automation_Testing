@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>MavenSeleniumCucumber</td>
+        <td>1</td>
+      <td>17 May 2022, 02:19</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">StepDefinition.CartListStepDifinition.closeNotificationMsg()</td>
+              <td>2</td>
+              <td class="duration" data-value="58000000">0.058</td>
+              <td class="duration" data-value="58000000">0.059</td>
+              <td class="duration" data-value="116000000">0.116</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CartListStepDifinition.user_add_prodcut_to_shopping_cart()</td>
+              <td>2</td>
+              <td class="duration" data-value="1567500000">1.567</td>
+              <td class="duration" data-value="1567500000">1.569</td>
+              <td class="duration" data-value="3135000000">3.135</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CartListStepDifinition.user_login_to_website()</td>
+              <td>2</td>
+              <td class="duration" data-value="6792500000">6.792</td>
+              <td class="duration" data-value="6792500000">7.037</td>
+              <td class="duration" data-value="13585000000">13.585</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CartListStepDifinition.user_press_the_shoping_cart_link()</td>
+              <td>2</td>
+              <td class="duration" data-value="1795000000">1.795</td>
+              <td class="duration" data-value="1795000000">1.876</td>
+              <td class="duration" data-value="3590000000">3.590</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CartListStepDifinition.user_select_digital_category()</td>
+              <td>1</td>
+              <td class="duration" data-value="1168000000">1.168</td>
+              <td class="duration" data-value="1168000000">1.168</td>
+              <td class="duration" data-value="1168000000">1.168</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CartListStepDifinition.user_select_electorincs_category()</td>
+              <td>1</td>
+              <td class="duration" data-value="894000000">0.894</td>
+              <td class="duration" data-value="894000000">0.894</td>
+              <td class="duration" data-value="894000000">0.894</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CartListStepDifinition.user_select_sub_category()</td>
+              <td>1</td>
+              <td class="duration" data-value="1392000000">1.392</td>
+              <td class="duration" data-value="1392000000">1.392</td>
+              <td class="duration" data-value="1392000000">1.392</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CartListStepDifinition.user_show_notificationMsg()</td>
+              <td>2</td>
+              <td class="duration" data-value="44000000">0.044</td>
+              <td class="duration" data-value="44000000">0.055</td>
+              <td class="duration" data-value="88000000">0.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CartListStepDifinition.user_show_product_in_shoppingCart()</td>
+              <td>2</td>
+              <td class="duration" data-value="37500000">0.037</td>
+              <td class="duration" data-value="37500000">0.041</td>
+              <td class="duration" data-value="75000000">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CategoryStepDifinition.user_login_to_website()</td>
+              <td>2</td>
+              <td class="duration" data-value="7008500000">7.008</td>
+              <td class="duration" data-value="7008500000">7.063</td>
+              <td class="duration" data-value="14017000000">14.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CategoryStepDifinition.user_press_any_category()</td>
+              <td>1</td>
+              <td class="duration" data-value="1086000000">1.086</td>
+              <td class="duration" data-value="1086000000">1.086</td>
+              <td class="duration" data-value="1086000000">1.086</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CategoryStepDifinition.user_press_on_sub_category()</td>
+              <td>1</td>
+              <td class="duration" data-value="835000000">0.835</td>
+              <td class="duration" data-value="835000000">0.835</td>
+              <td class="duration" data-value="835000000">0.835</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CategoryStepDifinition.user_press_specific_category()</td>
+              <td>1</td>
+              <td class="duration" data-value="1075000000">1.075</td>
+              <td class="duration" data-value="1075000000">1.075</td>
+              <td class="duration" data-value="1075000000">1.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CategoryStepDifinition.user_show_multiple_items()</td>
+              <td>1</td>
+              <td class="duration" data-value="36000000">0.036</td>
+              <td class="duration" data-value="36000000">0.036</td>
+              <td class="duration" data-value="36000000">0.036</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CategoryStepDifinition.user_show_multiple_products()</td>
+              <td>1</td>
+              <td class="duration" data-value="38000000">0.038</td>
+              <td class="duration" data-value="38000000">0.038</td>
+              <td class="duration" data-value="38000000">0.038</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CompareProductListStepDifinition.user_add_anther_product_to_compareList()</td>
+              <td>1</td>
+              <td class="duration" data-value="1573000000">1.573</td>
+              <td class="duration" data-value="1573000000">1.573</td>
+              <td class="duration" data-value="1573000000">1.573</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CompareProductListStepDifinition.user_add_product_to_compareList()</td>
+              <td>1</td>
+              <td class="duration" data-value="1580000000">1.580</td>
+              <td class="duration" data-value="1580000000">1.580</td>
+              <td class="duration" data-value="1580000000">1.580</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CompareProductListStepDifinition.user_login_to_website()</td>
+              <td>1</td>
+              <td class="duration" data-value="6891000000">6.891</td>
+              <td class="duration" data-value="6891000000">6.891</td>
+              <td class="duration" data-value="6891000000">6.891</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CompareProductListStepDifinition.user_press_the_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="1010000000">1.010</td>
+              <td class="duration" data-value="1010000000">1.010</td>
+              <td class="duration" data-value="1010000000">1.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CompareProductListStepDifinition.user_select_Categroy()</td>
+              <td>1</td>
+              <td class="duration" data-value="1072000000">1.072</td>
+              <td class="duration" data-value="1072000000">1.072</td>
+              <td class="duration" data-value="1072000000">1.072</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CompareProductListStepDifinition.user_select_sub_category()</td>
+              <td>1</td>
+              <td class="duration" data-value="806000000">0.806</td>
+              <td class="duration" data-value="806000000">0.806</td>
+              <td class="duration" data-value="806000000">0.806</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CompareProductListStepDifinition.user_show_all_product_in_compareList()</td>
+              <td>1</td>
+              <td class="duration" data-value="55000000">0.055</td>
+              <td class="duration" data-value="55000000">0.055</td>
+              <td class="duration" data-value="55000000">0.055</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CompareProductListStepDifinition.user_show_notification()</td>
+              <td>2</td>
+              <td class="duration" data-value="36000000">0.036</td>
+              <td class="duration" data-value="36000000">0.046</td>
+              <td class="duration" data-value="72000000">0.072</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_Navigate_order_details_url()</td>
+              <td>1</td>
+              <td class="duration" data-value="3499000000">3.499</td>
+              <td class="duration" data-value="3499000000">3.499</td>
+              <td class="duration" data-value="3499000000">3.499</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_add_product_item_toCart()</td>
+              <td>1</td>
+              <td class="duration" data-value="2070000000">2.070</td>
+              <td class="duration" data-value="2070000000">2.070</td>
+              <td class="duration" data-value="2070000000">2.070</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_agree_term_of_order()</td>
+              <td>1</td>
+              <td class="duration" data-value="62000000">0.062</td>
+              <td class="duration" data-value="62000000">0.062</td>
+              <td class="duration" data-value="62000000">0.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_closeNotificationMsg()</td>
+              <td>1</td>
+              <td class="duration" data-value="2076000000">2.076</td>
+              <td class="duration" data-value="2076000000">2.076</td>
+              <td class="duration" data-value="2076000000">2.076</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_confirm_order()</td>
+              <td>1</td>
+              <td class="duration" data-value="2088000000">2.088</td>
+              <td class="duration" data-value="2088000000">2.088</td>
+              <td class="duration" data-value="2088000000">2.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_enter_billing_address()</td>
+              <td>1</td>
+              <td class="duration" data-value="4959000000">4.959</td>
+              <td class="duration" data-value="4959000000">4.959</td>
+              <td class="duration" data-value="4959000000">4.959</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_login_to_website()</td>
+              <td>1</td>
+              <td class="duration" data-value="6860000000">6.860</td>
+              <td class="duration" data-value="6860000000">6.860</td>
+              <td class="duration" data-value="6860000000">6.860</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_press_checkout_for_order()</td>
+              <td>1</td>
+              <td class="duration" data-value="5109000000">5.109</td>
+              <td class="duration" data-value="5109000000">5.109</td>
+              <td class="duration" data-value="5109000000">5.109</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_select_payment_type()</td>
+              <td>1</td>
+              <td class="duration" data-value="2082000000">2.082</td>
+              <td class="duration" data-value="2082000000">2.082</td>
+              <td class="duration" data-value="2082000000">2.082</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_select_product()</td>
+              <td>1</td>
+              <td class="duration" data-value="2206000000">2.206</td>
+              <td class="duration" data-value="2206000000">2.206</td>
+              <td class="duration" data-value="2206000000">2.206</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_select_shipping_type()</td>
+              <td>1</td>
+              <td class="duration" data-value="2084000000">2.084</td>
+              <td class="duration" data-value="2084000000">2.084</td>
+              <td class="duration" data-value="2084000000">2.084</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_shipping_address()</td>
+              <td>1</td>
+              <td class="duration" data-value="2083000000">2.083</td>
+              <td class="duration" data-value="2083000000">2.083</td>
+              <td class="duration" data-value="2083000000">2.083</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_show_content_of_order()</td>
+              <td>1</td>
+              <td class="duration" data-value="29000000">0.029</td>
+              <td class="duration" data-value="29000000">0.029</td>
+              <td class="duration" data-value="29000000">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_show_msg_success_order()</td>
+              <td>1</td>
+              <td class="duration" data-value="2577000000">2.577</td>
+              <td class="duration" data-value="2577000000">2.577</td>
+              <td class="duration" data-value="2577000000">2.577</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_show_number_of_order()</td>
+              <td>1</td>
+              <td class="duration" data-value="32000000">0.032</td>
+              <td class="duration" data-value="32000000">0.032</td>
+              <td class="duration" data-value="32000000">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_show_order_details()</td>
+              <td>1</td>
+              <td class="duration" data-value="28000000">0.028</td>
+              <td class="duration" data-value="28000000">0.028</td>
+              <td class="duration" data-value="28000000">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_show_shopping_cart()</td>
+              <td>1</td>
+              <td class="duration" data-value="3180000000">3.180</td>
+              <td class="duration" data-value="3180000000">3.180</td>
+              <td class="duration" data-value="3180000000">3.180</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CreateOrderStepDifinition.user_show_total_price_of_order()</td>
+              <td>1</td>
+              <td class="duration" data-value="26000000">0.026</td>
+              <td class="duration" data-value="26000000">0.026</td>
+              <td class="duration" data-value="26000000">0.026</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CurrenciesStepDefinition.user_login_to_website()</td>
+              <td>2</td>
+              <td class="duration" data-value="6545000000">6.545</td>
+              <td class="duration" data-value="6545000000">6.674</td>
+              <td class="duration" data-value="13090000000">13.090</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CurrenciesStepDefinition.user_select_Euro_currency()</td>
+              <td>1</td>
+              <td class="duration" data-value="1165000000">1.165</td>
+              <td class="duration" data-value="1165000000">1.165</td>
+              <td class="duration" data-value="1165000000">1.165</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CurrenciesStepDefinition.user_select_dollar_currency()</td>
+              <td>1</td>
+              <td class="duration" data-value="2334000000">2.334</td>
+              <td class="duration" data-value="2334000000">2.334</td>
+              <td class="duration" data-value="2334000000">2.334</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CurrenciesStepDefinition.user_show_price_in_Euro()</td>
+              <td>1</td>
+              <td class="duration" data-value="28000000">0.028</td>
+              <td class="duration" data-value="28000000">0.028</td>
+              <td class="duration" data-value="28000000">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.CurrenciesStepDefinition.user_show_price_in_dollar()</td>
+              <td>1</td>
+              <td class="duration" data-value="29000000">0.029</td>
+              <td class="duration" data-value="29000000">0.029</td>
+              <td class="duration" data-value="29000000">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.FilterStepDifinition.user_filter_product_by_color_grey()</td>
+              <td>1</td>
+              <td class="duration" data-value="72000000">0.072</td>
+              <td class="duration" data-value="72000000">0.072</td>
+              <td class="duration" data-value="72000000">0.072</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.FilterStepDifinition.user_filter_product_by_color_red()</td>
+              <td>1</td>
+              <td class="duration" data-value="81000000">0.081</td>
+              <td class="duration" data-value="81000000">0.081</td>
+              <td class="duration" data-value="81000000">0.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.FilterStepDifinition.user_login_to_website()</td>
+              <td>2</td>
+              <td class="duration" data-value="7209000000">7.209</td>
+              <td class="duration" data-value="7209000000">7.628</td>
+              <td class="duration" data-value="14418000000">14.418</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.FilterStepDifinition.user_press_main_category()</td>
+              <td>2</td>
+              <td class="duration" data-value="980000000">0.980</td>
+              <td class="duration" data-value="980000000">0.983</td>
+              <td class="duration" data-value="1960000000">1.960</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.FilterStepDifinition.user_press_sub_category()</td>
+              <td>2</td>
+              <td class="duration" data-value="695000000">0.695</td>
+              <td class="duration" data-value="695000000">0.705</td>
+              <td class="duration" data-value="1390000000">1.390</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.FilterStepDifinition.user_show_product_with_grey_color()</td>
+              <td>1</td>
+              <td class="duration" data-value="43000000">0.043</td>
+              <td class="duration" data-value="43000000">0.043</td>
+              <td class="duration" data-value="43000000">0.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.FilterStepDifinition.user_show_product_with_red_color()</td>
+              <td>1</td>
+              <td class="duration" data-value="89000000">0.089</td>
+              <td class="duration" data-value="89000000">0.089</td>
+              <td class="duration" data-value="89000000">0.089</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.LoginStepDefinition.NavigateURL()</td>
+              <td>1</td>
+              <td class="duration" data-value="1123000000">1.123</td>
+              <td class="duration" data-value="1123000000">1.123</td>
+              <td class="duration" data-value="1123000000">1.123</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.LoginStepDefinition.Success_login()</td>
+              <td>1</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.LoginStepDefinition.closeBrwoser()</td>
+              <td>18</td>
+              <td class="duration" data-value="2799944444">2.799</td>
+              <td class="duration" data-value="2799944444">3.035</td>
+              <td class="duration" data-value="50399000000">50.399</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.LoginStepDefinition.openBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="1553000000">1.553</td>
+              <td class="duration" data-value="1553000000">1.553</td>
+              <td class="duration" data-value="1553000000">1.553</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.LoginStepDefinition.user_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.LoginStepDefinition.user_input_email_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="260000000">0.260</td>
+              <td class="duration" data-value="260000000">0.260</td>
+              <td class="duration" data-value="260000000">0.260</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.LoginStepDefinition.user_press_submit()</td>
+              <td>1</td>
+              <td class="duration" data-value="1827000000">1.827</td>
+              <td class="duration" data-value="1827000000">1.827</td>
+              <td class="duration" data-value="1827000000">1.827</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.RegisterStepDefinition.Navigate_Register_Page()</td>
+              <td>1</td>
+              <td class="duration" data-value="1477000000">1.477</td>
+              <td class="duration" data-value="1477000000">1.477</td>
+              <td class="duration" data-value="1477000000">1.477</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.RegisterStepDefinition.openBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="4525000000">4.525</td>
+              <td class="duration" data-value="4525000000">4.525</td>
+              <td class="duration" data-value="4525000000">4.525</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.RegisterStepDefinition.successfully_register()</td>
+              <td>1</td>
+              <td class="duration" data-value="31000000">0.031</td>
+              <td class="duration" data-value="31000000">0.031</td>
+              <td class="duration" data-value="31000000">0.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.RegisterStepDefinition.user_press_register_btn()</td>
+              <td>1</td>
+              <td class="duration" data-value="1507000000">1.507</td>
+              <td class="duration" data-value="1507000000">1.507</td>
+              <td class="duration" data-value="1507000000">1.507</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.RegisterStepDefinition.user_register_valid_data()</td>
+              <td>1</td>
+              <td class="duration" data-value="2390000000">2.390</td>
+              <td class="duration" data-value="2390000000">2.390</td>
+              <td class="duration" data-value="2390000000">2.390</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.ResetStepDefinition.EnterEmail()</td>
+              <td>1</td>
+              <td class="duration" data-value="184000000">0.184</td>
+              <td class="duration" data-value="184000000">0.184</td>
+              <td class="duration" data-value="184000000">0.184</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.ResetStepDefinition.NavigateURL()</td>
+              <td>1</td>
+              <td class="duration" data-value="1121000000">1.121</td>
+              <td class="duration" data-value="1121000000">1.121</td>
+              <td class="duration" data-value="1121000000">1.121</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.ResetStepDefinition.Recover()</td>
+              <td>1</td>
+              <td class="duration" data-value="853000000">0.853</td>
+              <td class="duration" data-value="853000000">0.853</td>
+              <td class="duration" data-value="853000000">0.853</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.ResetStepDefinition.ResetSucess()</td>
+              <td>1</td>
+              <td class="duration" data-value="30000000">0.030</td>
+              <td class="duration" data-value="30000000">0.030</td>
+              <td class="duration" data-value="30000000">0.030</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.ResetStepDefinition.forgetPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="969000000">0.969</td>
+              <td class="duration" data-value="969000000">0.969</td>
+              <td class="duration" data-value="969000000">0.969</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.ResetStepDefinition.openBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="1609000000">1.609</td>
+              <td class="duration" data-value="1609000000">1.609</td>
+              <td class="duration" data-value="1609000000">1.609</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.SearchStepDefinition.searchSuccess()</td>
+              <td>1</td>
+              <td class="duration" data-value="47000000">0.047</td>
+              <td class="duration" data-value="47000000">0.047</td>
+              <td class="duration" data-value="47000000">0.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.SearchStepDefinition.user_enter_submit()</td>
+              <td>1</td>
+              <td class="duration" data-value="925000000">0.925</td>
+              <td class="duration" data-value="925000000">0.925</td>
+              <td class="duration" data-value="925000000">0.925</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.SearchStepDefinition.user_input_search_keyword()</td>
+              <td>1</td>
+              <td class="duration" data-value="128000000">0.128</td>
+              <td class="duration" data-value="128000000">0.128</td>
+              <td class="duration" data-value="128000000">0.128</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.SearchStepDefinition.user_login_to_website()</td>
+              <td>1</td>
+              <td class="duration" data-value="6491000000">6.491</td>
+              <td class="duration" data-value="6491000000">6.491</td>
+              <td class="duration" data-value="6491000000">6.491</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.TagStepDefinition.user_login_to_website()</td>
+              <td>2</td>
+              <td class="duration" data-value="6742500000">6.742</td>
+              <td class="duration" data-value="6742500000">6.797</td>
+              <td class="duration" data-value="13485000000">13.485</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.TagStepDefinition.user_scroll_down_browser()</td>
+              <td>2</td>
+              <td class="duration" data-value="2009500000">2.009</td>
+              <td class="duration" data-value="2009500000">2.010</td>
+              <td class="duration" data-value="4019000000">4.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.TagStepDefinition.user_select_Game_tag()</td>
+              <td>1</td>
+              <td class="duration" data-value="2008000000">2.008</td>
+              <td class="duration" data-value="2008000000">2.008</td>
+              <td class="duration" data-value="2008000000">2.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.TagStepDefinition.user_select_category()</td>
+              <td>2</td>
+              <td class="duration" data-value="3050000000">3.050</td>
+              <td class="duration" data-value="3050000000">3.072</td>
+              <td class="duration" data-value="6100000000">6.100</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.TagStepDefinition.user_select_computer_tag()</td>
+              <td>1</td>
+              <td class="duration" data-value="2061000000">2.061</td>
+              <td class="duration" data-value="2061000000">2.061</td>
+              <td class="duration" data-value="2061000000">2.061</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.TagStepDefinition.user_show_all_tags()</td>
+              <td>2</td>
+              <td class="duration" data-value="1954500000">1.954</td>
+              <td class="duration" data-value="1954500000">1.971</td>
+              <td class="duration" data-value="3909000000">3.909</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.TagStepDefinition.user_show_product_computer()</td>
+              <td>1</td>
+              <td class="duration" data-value="1066000000">1.066</td>
+              <td class="duration" data-value="1066000000">1.066</td>
+              <td class="duration" data-value="1066000000">1.066</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.TagStepDefinition.user_show_product_game()</td>
+              <td>1</td>
+              <td class="duration" data-value="50000000">0.050</td>
+              <td class="duration" data-value="50000000">0.050</td>
+              <td class="duration" data-value="50000000">0.050</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.WishListStepDifinition.user_add_product_to_wishlist()</td>
+              <td>2</td>
+              <td class="duration" data-value="1571500000">1.571</td>
+              <td class="duration" data-value="1571500000">1.576</td>
+              <td class="duration" data-value="3143000000">3.143</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.WishListStepDifinition.user_go_to_wishList()</td>
+              <td>2</td>
+              <td class="duration" data-value="1542500000">1.542</td>
+              <td class="duration" data-value="1542500000">1.561</td>
+              <td class="duration" data-value="3085000000">3.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.WishListStepDifinition.user_login_to_website()</td>
+              <td>2</td>
+              <td class="duration" data-value="6920000000">6.920</td>
+              <td class="duration" data-value="6920000000">7.071</td>
+              <td class="duration" data-value="13840000000">13.840</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.WishListStepDifinition.user_select_Jewlery_Category()</td>
+              <td>1</td>
+              <td class="duration" data-value="1107000000">1.107</td>
+              <td class="duration" data-value="1107000000">1.107</td>
+              <td class="duration" data-value="1107000000">1.107</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.WishListStepDifinition.user_select_book_category()</td>
+              <td>1</td>
+              <td class="duration" data-value="1132000000">1.132</td>
+              <td class="duration" data-value="1132000000">1.132</td>
+              <td class="duration" data-value="1132000000">1.132</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.WishListStepDifinition.user_show_notification()</td>
+              <td>2</td>
+              <td class="duration" data-value="88500000">0.088</td>
+              <td class="duration" data-value="88500000">0.090</td>
+              <td class="duration" data-value="177000000">0.177</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinition.WishListStepDifinition.user_show_product_in_wishlist()</td>
+              <td>2</td>
+              <td class="duration" data-value="35500000">0.035</td>
+              <td class="duration" data-value="35500000">0.038</td>
+              <td class="duration" data-value="71000000">0.071</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>90</td>
+            <td>128</td>
+            <td class="duration">2.052</td>
+            <td class="duration">50.399</td>
+            <td class="duration">4:22.680</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
