@@ -20,3 +20,5 @@ intellij IDEA
 ![CucmberJVM_version](https://user-images.githubusercontent.com/95087747/167275868-378934f7-271e-4ec7-a879-4e7fedd2afbd.PNG)
 ![CuCumberJunit_version](https://user-images.githubusercontent.com/95087747/167275870-ecbd13dd-99e6-49c7-b1d0-071d83cc6c77.PNG)
 ![Selenium_version](https://user-images.githubusercontent.com/95087747/167275872-f899b847-de0a-4be1-995d-3f9783ac1846.PNG)
+## Cucumber Report 
+![screenshot](https://user-images.githubusercontent.com/95087747/168703496-fac820f2-a070-4588-a991-ad3a3b6813f7.png)
