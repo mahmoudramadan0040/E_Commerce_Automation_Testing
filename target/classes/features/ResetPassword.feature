@@ -1,3 +1,4 @@
+@Regression
 Feature: user can reset the password
 
 

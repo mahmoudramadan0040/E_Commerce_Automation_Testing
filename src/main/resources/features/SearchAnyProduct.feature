@@ -1,4 +1,4 @@
-
+@Regression
 Feature: user should search for any product
   Background: user login first
     Given user login in the website

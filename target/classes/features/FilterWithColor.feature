@@ -1,3 +1,4 @@
+@Regression
 Feature: user can filter product with color
   # Scenario case 2 (SC2)
   Background:

@@ -1,3 +1,5 @@
+
+@Regression
 Feature: user should be able to register to the system
 
 

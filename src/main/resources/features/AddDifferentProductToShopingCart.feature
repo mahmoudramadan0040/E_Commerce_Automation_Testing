@@ -1,3 +1,4 @@
+@Regression
 Feature: user can add product to wishlist
   # Scenario case 2 (SC2)
   Background:

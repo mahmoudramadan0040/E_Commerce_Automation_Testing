@@ -1,3 +1,4 @@
+@Regression
 Feature: user can order any product
   # Scenario case 2 (SC2)
   Background:

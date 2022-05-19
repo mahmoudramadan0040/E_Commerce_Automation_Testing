@@ -1,3 +1,4 @@
+@Regression
 Feature: user can selected different tag
   # Scenario case 2 (SC2)
   Background:

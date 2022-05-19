@@ -1,3 +1,4 @@
+@Regression
 Feature: user can switch between currencies US-Euro
 
   Scenario: user can switch between us dollar --> Euro

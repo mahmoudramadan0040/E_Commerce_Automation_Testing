@@ -6,7 +6,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features = "src\\main\\resources\\features",
         glue = "StepDefinition",
-        plugin = {"json:target/cucumber/cucumber.json"}
+        plugin = {"json:target/cucumber/cucumber.json"},
+        tags = "@Regression"
 
 )
 public class TestRunner {

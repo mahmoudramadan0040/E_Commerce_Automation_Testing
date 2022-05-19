@@ -1,3 +1,4 @@
+@Regression
 Feature: user should be able to login to the system
   # Scenario case 2 (SC2)
 

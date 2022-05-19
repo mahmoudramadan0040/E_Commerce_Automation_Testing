@@ -1,3 +1,4 @@
+@Regression
 Feature: user select random category
   # Scenario case 2 (SC2)
   Background:

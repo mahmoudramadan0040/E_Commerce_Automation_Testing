@@ -1,3 +1,4 @@
+@Regression
 Feature: user can add product compare list
   # Scenario case 2 (SC2)
   Background:
